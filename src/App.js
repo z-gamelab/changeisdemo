@@ -9,7 +9,7 @@ function App() {
       .catch((error) => console.log(error));
   }, [])
   
-  return (
+  return Object.keys(apiData).length > 0 ? (
     <>
       {apiData.map((aData, index) => (
         <>
@@ -20,6 +20,8 @@ function App() {
         </>
       ))}
     </>
+  ) : (
+    <h1>Fetching data...</h1>
   );
 }
 
