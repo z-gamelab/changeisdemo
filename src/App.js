@@ -14,7 +14,7 @@ function App() {
       {apiData.map((aData, index) => (
         <>
           <h1>New Record: {index}</h1>
-          <p>URL: {aData.url}</p>
+          <p><img src={aData.url} alt={aData.title} /></p>
           <p>Title: {aData.title}</p>
           <p>Description: {aData.description}</p>
         </>
